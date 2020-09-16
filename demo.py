@@ -77,7 +77,7 @@ def hello():
             # try:
             cleaned_text = text_preprocess(text)
             prediction = make_prediction(cleaned_text)
-            data["result"] = str(prediction[0])
+            data["result"] = label_dict[str(prediction[0])]
             data["success"] = True
             # except Exception:
             #     data["error_message"] = "Sorry some internal server error occured"
